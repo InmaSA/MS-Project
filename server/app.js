@@ -1,5 +1,6 @@
 require('dotenv').config()
 require('./configs/mongoose.config')
+require('./configs/redis.config')
 
 const bodyParser   = require('body-parser')
 const cookieParser = require('cookie-parser')
@@ -27,7 +28,7 @@ app.locals.title = 'MS-Project'
 
 
 
-app.use('/', require('./routes/index.routes'))
+app.use('//work.mediasmart.io', require('./routes/index.routes'))
 app.use('/api', require('./routes/employees.routes'))
 
 module.exports = app
