@@ -8,7 +8,7 @@ const Dashboard = (props) => {
     <section className="container">
       <div className="row justify-content-around">
         {
-          employees.map(elm => <GridCard key={elm._id} {...elm}/>)
+          employees.map((elm) => <GridCard key={elm._id}  {...elm}/>)
         }
       </div> 
     </section>
