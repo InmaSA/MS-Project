@@ -1,5 +1,9 @@
 import React, {Component} from 'react'
+import { Switch, Route } from 'react-router-dom'
 import EmployeeServices from '../src/services/employee.service'
+
+import Dashboard from './components/Dashboard'
+
 
 class App extends Component {
   constructor() {
@@ -18,12 +22,17 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state.employees)
-
+    const employees = this.state.employees
+    if(employees && employees.length > 0) {
+      return (
+        
+        <Switch>
+            <Route path="/" exact render={() => <Dashboard employees={this.state.employees}/>}/>
+        </Switch>
+      )
+    }
     return (
-      <div className="App">
-        <h1>hello</h1>
-      </div>
+      <h1>no hay nada</h1>
     )
   }
 }
