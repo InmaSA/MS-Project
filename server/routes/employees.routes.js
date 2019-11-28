@@ -15,7 +15,7 @@ router.get('/', (req,res,next) => {
       res.status(500). send(err)
     }
     if(data != null) {
-      res.json(data)
+      res.json(JSON.parse(data))
     }
     else {
       Employee.find()

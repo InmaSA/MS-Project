@@ -13,7 +13,7 @@ const task = cron.schedule('30 0 * * *', () => {
   router.get('/', (req,res,next) => {
     Employee.find()
     .then(all => {
-      redis_client.setex(process.env.REDIS_ID_KEY, 86400, all)
+      redis_client.setex(process.env.REDIS_ID_KEY, 86400, JSON.stringify(all))
       res.json(all)
     })
     .catch(err => res.status(500).json({message: 'Error cacheando la info'}))

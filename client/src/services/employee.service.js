@@ -4,7 +4,7 @@ export default class EmployeeServices {
   constructor() {
 
       this.service = axios.create({
-        baseURL: `${process.env.REACT_APP_URL}`,
+        baseURL: `http://localhost:5000/api`,
         withCredentials: true
       })
   }
