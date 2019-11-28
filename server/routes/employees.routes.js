@@ -20,7 +20,7 @@ router.get('/', (req,res,next) => {
     else {
       Employee.find()
       .then(all => res.json(all))
-      .catch(err => res.status(500).json({message: 'Error obteniendo la lista'}))
+      .catch(err => res.status(500).json({message: 'Error getting data directly from DB and not from redis'}))
     }
   })
 })

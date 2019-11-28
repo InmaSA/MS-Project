@@ -24,7 +24,7 @@ app.use(cookieParser())
 
 // CORS middleware
 
-const whitelist = ['http://localhost:3000']
+const whitelist = [`${process.env.WHITE_URL}`]
 const corsOptions = {
   origin: (origin, cb) => {
     const originIsWhitelisted = whitelist.includes(origin)
