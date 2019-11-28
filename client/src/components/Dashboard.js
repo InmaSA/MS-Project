@@ -1,17 +1,19 @@
 import React from 'react'
+import '../styles/dashboard.css'
+
 import GridCard from './GridCard'
 
 const Dashboard = (props) => {
 
   const employees = props.employees
   return(
-    <section className="container">
-      <div className="row justify-content-around">
+    <main className="container dashboard">
+      <section className="row justify-content-between">
         {
           employees.map((elm) => <GridCard key={elm._id}  {...elm}/>)
         }
-      </div> 
-    </section>
+      </section> 
+    </main>
   )
 }
 

@@ -1,0 +1,22 @@
+.hero {
+  background-color: rgb(184, 182, 182);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero img {
+  width: 8%;
+  height: 8%;
+  margin-left: 2%;
+  margin-top: 0.5%;
+}
+
+.title {
+  width: 90%;
+}
+.title h1 {
+  font-size: 3.5em;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1%;
+}

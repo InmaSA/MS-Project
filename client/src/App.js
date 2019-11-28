@@ -1,8 +1,11 @@
 import React, {Component} from 'react'
+import './App.css'
 import { Switch, Route } from 'react-router-dom'
 import EmployeeServices from '../src/services/employee.service'
 
 import Dashboard from './components/Dashboard'
+import Loader from './components/layouts/Loader'
+import PseudoNavbar from './components/layouts/PseudoNavbar'
 
 
 class App extends Component {
@@ -25,14 +28,20 @@ class App extends Component {
     const employees = this.state.employees
     if(employees && employees.length > 0) {
       return (
-        
-        <Switch>
-            <Route path="/" exact render={() => <Dashboard employees={this.state.employees}/>}/>
-        </Switch>
+        <div className="App">
+          <PseudoNavbar/>
+
+          <Switch>
+              <Route path="/" exact render={() => <Dashboard employees={this.state.employees}/>}/>
+          </Switch>
+        </div>
       )
     }
     return (
-      <h1>no hay nada</h1>
+      <div className="App">
+        <PseudoNavbar/>
+        <Loader/>
+      </div>
     )
   }
 }
