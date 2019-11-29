@@ -8,7 +8,7 @@ const Dashboard = (props) => {
   const employees = props.employees
   return(
     <main className="container dashboard">
-      <section className="row justify-content-between">
+      <section className="row justify-content-around">
         {
           employees.map((elm) => <GridCard key={elm._id}  {...elm}/>)
         }

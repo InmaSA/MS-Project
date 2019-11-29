@@ -20,7 +20,7 @@ class GridCard extends Component {
   render() {
     return(
       <>
-        <article onClick={this.handleModalOpen} className="col-xl-4 col-lg-5 col-md-10">
+        <article onClick={this.handleModalOpen} className="col-xl-4 col-lg-6 col-md-5 col-sm-10">
           <div className="grid-card">
             <header className="top">
               <img src={this.props.image} alt={this.props.name}></img>
@@ -32,8 +32,13 @@ class GridCard extends Component {
           </div>
         </article>
   
-        <Modal centered show={this.state.showModal} onHide={this.handleModalClose}>
-          <ProfileDetails {...this.props}/>
+        <Modal centered size="lg" show={this.state.showModal} onHide={this.handleModalClose}>
+          <Modal.Body>
+            <ProfileDetails {...this.props}/>
+          </Modal.Body>
+          <Modal.Footer>
+            <button className="modal-button" onClick={this.handleModalClose}>Close</button>
+          </Modal.Footer>
         </Modal>
 
       </>

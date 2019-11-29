@@ -11,10 +11,65 @@
   margin-top: 5px;
 }
 
-.hero h1 {
-  width: 90%;
+.title {
+  width: 100%;
   font-size: 3.5em;
   font-weight: 600;
   text-align: center;
+}
 
+
+
+
+
+@media(max-width: 1200px) {
+  .title {
+    font-size: 3.3em;
+  }
+  .hero img {
+    width: 85px;
+    height: 65px;
+  }
+  .hero {
+    height: 70px;
+  }
+}
+
+@media(max-width: 992px) {
+  .title {
+    font-size: 3em;
+  }
+  .hero img {
+    width: 80;
+    height: 60px;
+  }
+  .hero {
+    height: 65px;
+  }
+}
+
+@media(max-width: 768px) {
+  .title {
+    font-size: 2.8em;
+  }
+  .hero img {
+    width: 75px;
+    height: 55px;
+  }
+  .hero {
+    height: 60px;
+  }
+}
+
+@media(max-width: 576px) {
+  .title {
+    font-size: 2.6em;
+  }
+  .hero img {
+    width: 70px;
+    height: 50px;
+  }
+  .hero {
+    height: 55px;
+  }
 }
