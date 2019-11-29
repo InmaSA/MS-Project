@@ -20,14 +20,16 @@ class GridCard extends Component {
   render() {
     return(
       <>
-        <article onClick={this.handleModalOpen} className="col-xl-3 col-lg-5 col-md-10 grid-card">
-          <header className="row">
-            <img className="col-2" src={this.props.image} alt={this.props.name}></img>
-            <h5 className="col-10">{this.props.name}</h5>
-          </header>
-          <footer>
-            <p>{this.props.age} years old</p>
-          </footer>
+        <article onClick={this.handleModalOpen} className="col-xl-4 col-lg-5 col-md-10">
+          <div className="grid-card">
+            <header className="top">
+              <img src={this.props.image} alt={this.props.name}></img>
+              <h5>{this.props.name}</h5>
+            </header>
+            <footer className="bottom">
+              <p>{this.props.age} years old</p>
+            </footer>
+          </div>
         </article>
   
         <Modal centered show={this.state.showModal} onHide={this.handleModalClose}>

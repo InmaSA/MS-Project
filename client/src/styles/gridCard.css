@@ -1,4 +1,27 @@
 .grid-card {
   border: 1px solid black;
-  margin: 1%;
+  margin: 40px auto;
+}
+
+.top {
+  margin: 10px;
+  display: flex;
+}
+
+.top img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.top h5 {
+  font-weight: 600;
+  width: 250px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.bottom {
+  margin: 40px 10px 10px;
 }
