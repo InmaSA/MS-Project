@@ -10,9 +10,9 @@
 
     Download the code from this repository.
 
-3. Add .env
+3. Add .env and install dependencies
 
-    Add the necesary environment variables.    
+    Add the necesary environment variables and install all dependencies of the two package.json files.   
 
 4. Poblate your choosen DB
 
@@ -50,7 +50,7 @@ cd MS-Project
 ```
 
 
-## 3.- Add .env
+## 3.- Add .env and install dependencies
 
 Go to client directory:
 
@@ -61,6 +61,13 @@ cd client
 Create .env file with the following environment variables:
 
 REACT_APP_URL=http://localhost:5000/api/
+
+
+Install dependencies:
+
+```sh
+npm install
+```
 
 
 Open a different terminal window and go back to root MS-Project directory:
@@ -87,6 +94,11 @@ REDIS_ID_KEY || choose a name for redis key
 COMPANY_DB_ENDPOINT || endpoint given
 
 
+Install dependencies:
+
+```sh
+npm install
+```
 
 ## 4.- Poblate your choosen DB
 
