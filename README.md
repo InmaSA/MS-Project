@@ -2,7 +2,7 @@
 
 ## Overview
 
-1. Install prerequisites
+1. Prerequisites
 
     Before installing project make sure the following prerequisites have been met.
 
@@ -29,9 +29,9 @@
 
 ___
 
-## 1.- Install prerequisites
+## 1.- Prerequisites
 
-You need to have redis and mongodb both installed and started.
+You need to have [redis](https://redis.io/topics/quickstart) and [mongodb](https://docs.mongodb.com/manual/installation/) both installed and started.
 
 
 
@@ -105,6 +105,10 @@ npm install
 To poblate the data base go to server terminal window and execute the following script inside server folder:
 
 ```sh
+cd server
+```
+
+```sh
 node bin/seed.js
 ```
 
@@ -116,10 +120,18 @@ To deploy the local environment for developers do you need execute these steps (
 1.- Start running client with this command inside client folder, in client terminal window. This will open browser automatically:
 
 ```sh
+cd client
+```
+
+```sh
 npm start
 ```
 
 2-. Start running server whith the following command inside server folder, in server terminal window:
+
+```sh
+cd server
+```
 
 ```sh
 npm start
